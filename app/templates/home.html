@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+
+{% block navbar_links %}
+    <div class="me-3">
+        <li class="nav-item" style="border-bottom: solid #F7AEF8;">
+            <a class="nav-link" href="{{ url_for('home') }}"><b>Home</b></a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('my_work') }}">My Work</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('booking') }}">Booking</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a href="{{ url_for('contact') }}">
+                <button class="btn btn-light btn-outline-secondary my-2 my-sm-0" type="submit">Contact Us!</button>
+            </a>
+        </li>
+    </div>
+{% endblock navbar_links %}
+
+{% block main %}
+
+    <div class="container" style="padding-top: 150px;">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div style="padding-bottom: 50px;">
+                    {% for category, message in messages %}
+                        <div class="container text-center alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <div class="text-center border-bottom manual-font">
+            <h3><b>Home</b></h3>
+        </div>
+        <div class="text-center border-bottom" style="padding-top: 100px; padding-left: 100px; padding-right: 100px; padding-bottom: 50px; font-size: large;">
+            <div>
+                <p>
+                    Welcome to <b style="font-weight: 500;">Rujul's Mehndi</b> Official Website!<br>
+                    Here, you can <a href="{{ url_for('about') }}">learn more</a> about us,<br>view <a href="{{ url_for('my_work') }}">my work</a> as a mehndi artist,<br>find out about the <a href="{{ url_for('services') }}">services</a> we offer,<br>book me for <a href="{{ url_for('booking') }}">events</a>, and <a href="{{ url_for('contact') }}">communicate</a> with me!
+                </p>
+            </div>
+        </div>
+    </div>    
+    <div style="padding-top: 100px;">
+        <div style="background-color: lavender;">
+            <div style="padding: 100px;">
+                <p class="text-center" style="font-size: 21px; border-bottom: solid 1px; padding-bottom: 10px;">About The Art of Mehndi</p>
+                <p class="text-justify" style="padding-top: 20px;">
+                    Mehndi, commonly known as henna, is an ancient and revered art form celebrated in diverse cultures across the globe. Its origins can be traced back many centuries, with the natural dye extracted from the henna plant being used to craft intricate, temporary designs on the skin. This timeless practice holds immense cultural significance, particularly in regions like South Asia and the Middle East, where it is an integral part of weddings, festivals, and various joyous occasions. The enchanting designs showcase intricate patterns and symbols representing happiness, luck, and prosperity. Mehndi's appeal has transcended borders, captivating people worldwide for its beauty and the joy it brings to gatherings and festivities.
+                </p>
+                <div class="text-center">
+                    <div class="row" style="padding-top: 30px;">
+                        <div class="col-md-6">
+                            <img style="width: 100%; height: auto;" src="{{ url_for('static', filename='/img/about-mehndi.jpg') }}" alt="Image of mehndi" width="425px">
+                        </div>
+                        <div class="col-md-6">
+                            <img style="width: 100%; height: auto;" src="{{ url_for('static', filename='/img/about-mehndi2.webp') }}" alt="Image of mehndi 2" width="425px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div style="padding: 100px;">
+                <p class="text-center" style="font-size: 21px; border-bottom: solid 1px; padding-bottom: 10px;">Connect With Us!</p>
+                <section class="container d-flex justify-content-center justify-content-lg-between p-4">
+                    <div class="me-5 d-none d-lg-block">
+                        <span style="font-weight: 500;">Our social networks:</span>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/rujul-shah-09799b257/" target="blank" class="me-4 text-reset">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rujul_mehndi/" target="blank" class="me-4 text-reset">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </section>
+                <p class="text-center" style="padding-top: 20px;">
+                    Please feel free to reach out to us through our social networks on LinkedIn or Instagram.<br>We are open to any questions, comments, or concerns, either directly to us or through the website on our <a href="{{ url_for('contact') }}">contact page</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock main %}

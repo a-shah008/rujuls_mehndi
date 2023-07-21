@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+
+{% block navbar_links %}
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('my_work') }}">My Work</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item" style="border-bottom: solid #F7AEF8;">
+            <a class="nav-link" href="{{ url_for('booking') }}"><b>Booking</b></a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a href="{{ url_for('contact') }}">
+                <button class="btn btn-light btn-outline-secondary my-2 my-sm-0" type="submit">Contact Us!</button>
+            </a>
+        </li>
+    </div>
+{% endblock navbar_links %}
+
+{% block main %}
+
+    <div class="container" style="padding-top: 150px;">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+                <div style="padding-bottom: 50px;">
+                    {% for category, message in messages %}
+                        <div class="container text-center alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+			{% endif %}
+		{% endwith %}
+        <div class="text-center border-bottom manual-font">
+            <h3><b>Booking</b></h3>
+        </div>
+        <div class="text-center border-bottom" style="padding-top: 100px; padding-left: 100px; padding-right: 100px; padding-bottom: 50px; font-size: large;">
+            <div>
+                <p>
+                    Fill out the form below to book me for an event!<br>
+                    For events, I charge hourly at <b class="text-success">$45.00 USD / hour</b>.<br>
+                    After you fill out the form, your data will be securely<br>
+                    inputted into our database, where I will later review<br>
+                    it and reach out as to whether I will be able to make it or not.<br><br>
+                    <b>Transportation Fees:</b> <b class="text-success">$0.60 per mile driven (to and forth)</b>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 100px;">
+        <div style="background-color: lavender;">
+            <div>
+                <div class="row">
+                    <div class="container" style="padding: 100px;">
+                        <div style="padding-bottom: 50px;">
+                            <div style="border-bottom: solid 1px;">
+                                <h3 class="text-center">Event Booking Form</h3>
+                            </div>
+                            <div class="text-center" style="padding-top: 10px;">
+                                <p>
+                                    <b class="text-danger"> * </b> → Required Field
+                                </p>
+                            </div>
+                        </div>
+                        <form method="POST" action="" enctype="multipart/form-data">
+                            {{ form.hidden_tag() }}
+                            <fieldset class="form-group">
+                                <div class="text-left" style="border-bottom: solid 1px;">
+                                    <h4 class="manual-font" style="color: black; font-weight: bold; font-size: 21px;">Event: Organizer Contact Info</h4>
+                                </div>
+                                <br><br>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_organizer_fullname.label(class="form-control-label") }}
+                                    {% if form.event_organizer_fullname.errors %}
+                                        {{ form.event_organizer_fullname(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_organizer_fullname.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_organizer_fullname(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: John Doe
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_organizer_email.label(class="form-control-label") }}
+                                    {% if form.event_organizer_email.errors %}
+                                        {{ form.event_organizer_email(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_organizer_email.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_organizer_email(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: john.doe@gmail.com
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_organizer_phonenumber.label(class="form-control-label") }}
+                                    {% if form.event_organizer_phonenumber.errors %}
+                                        {{ form.event_organizer_phonenumber(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_organizer_phonenumber.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_organizer_phonenumber(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: 123-456-789
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_organizer_areaofresidence.label(class="form-control-label") }}
+                                    {% if form.event_organizer_areaofresidence.errors %}
+                                        {{ form.event_organizer_areaofresidence(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_organizer_areaofresidence.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_organizer_areaofresidence(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: Bartlett, IL, 60103
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="text-left" style="padding-top: 25px; border-bottom: solid 1px;">
+                                    <h4 class="manual-font" style="color: black; font-weight: bold; font-size: 21px;">Event: General Info</h4>
+                                </div>
+                                <br><br>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_general_name.label(class="form-control-label") }}
+                                    {% if form.event_general_name.errors %}
+                                        {{ form.event_general_name(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_general_name.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_general_name(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: John Weds Mary
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_general_type.label(class="form-control-label") }}
+                                    {% if form.event_general_type.errors %}
+                                        {{ form.event_general_type(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_general_type.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_general_type(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: Wedding, Sangeet, etc.
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_general_location.label(class="form-control-label") }}
+                                    {% if form.event_general_location.errors %}
+                                        {{ form.event_general_location(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_general_location.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_general_location(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: The Stonegate Banquet & Conference Centre, Hoffman Estates, IL
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_general_date.label(class="form-control-label") }}<small class="ms-2 text-primary" style="font-size: small;">Accepted Format: <b>month/day/year</b></small>
+                                    {% if form.event_general_date.errors %}
+                                        {{ form.event_general_date(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_general_date.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_general_date(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: 12/1/2024
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_general_starttime.label(class="form-control-label") }}<small class="ms-2 text-primary" style="font-size: small;">Accepted Format: <b>hours:minutes AM/PM</b></small>
+                                    {% if form.event_general_starttime.errors %}
+                                        {{ form.event_general_starttime(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_general_starttime.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_general_starttime(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: 4:30 PM
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.event_general_endtime.label(class="form-control-label") }}<small class="ms-2 text-primary" style="font-size: small;">Accepted Format: <b>hours:minutes AM/PM</b></small>
+                                    {% if form.event_general_endtime.errors %}
+                                        {{ form.event_general_endtime(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_general_endtime.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_general_endtime(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: 9:30 PM
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.event_general_extracomments.label(class="form-control-label") }}
+                                    {% if form.event_general_extracomments.errors %}
+                                        {{ form.event_general_extracomments(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.event_general_extracomments.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.event_general_extracomments(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-warning">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Max 150 characters
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group" style="padding-top: 25px;">
+                                    {{ form.agreed }}
+                                    {{ form.agreed.label(class="ms-2") }}
+                                </div>
+                            </fieldset>
+                            <div class="form-group text-center">
+                                {{ form.submit(class="text-center btn btn-info btn-lg") }}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock main %}

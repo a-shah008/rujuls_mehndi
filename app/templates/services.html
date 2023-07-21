@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block navbar_links %}
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('my_work') }}">My Work</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item" style="border-bottom: solid #F7AEF8;">
+            <a class="nav-link" href="{{ url_for('services') }}"><b>Services</b></a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('booking') }}">Booking</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a href="{{ url_for('contact') }}">
+                <button class="btn btn-light btn-outline-secondary my-2 my-sm-0" type="submit">Contact Us!</button>
+            </a>
+        </li>
+    </div>
+{% endblock navbar_links %}
+
+{% block main %}
+
+    <div class="container" style="padding-top: 150px;">
+        <div class="text-center border-bottom manual-font">
+            <h3><b>Services</b></h3>
+        </div>
+        <div class="text-center border-bottom" style="padding-top: 100px; padding-left: 100px; padding-right: 100px; padding-bottom: 40px; font-size: large;">
+            <p>The following are services I provide. To purchase individual services, 
+                <br>contact me either via email or through our <a href="{{ url_for('contact') }}">contact page</a>. For events,<br>
+                use the booking page and I will reach out back to you as to further details!</p><br>
+                <b>Transportation Fees for All:</b> <b class="text-success">$0.60 per mile driven (to and forth)</b>
+        </div>
+    </div>
+    <div style="padding-top: 100px;">
+        <div style="background-color: lavender; padding-bottom: 100px;">
+            <div style="padding: 100px;">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="property-card">
+                            <div class="property-image1">
+                            </div>
+                            <div class="property-description">
+                                <h5> Full Hand </h5>
+                                <p class="text-muted" style="font-size: smaller;">Individual Application<br><b style="color: green;"><br>$35.00 USD</b><br><b style="color: orange; font-weight: 400;">+ Transportation Costs</b><br>(To Purchase, <a style="color: black; font-weight: bold;" href="{{ url_for('contact') }}">Contact Me!</a>)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="property-card">
+                            <div class="property-image2" style="align-items: center;">
+                            </div>
+                            <div class="property-description">
+                                <h5> String Design </h5>
+                                <p class="text-muted" style="font-size: smaller;">Individual Application<br><b style="color: green;"><br>$20.00 USD</b><br><b style="color: orange; font-weight: 400;">+ Transportation Costs</b><br>(To Purchase, <a style="color: black; font-weight: bold;" href="{{ url_for('contact') }}">Contact Me!</a>)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="property-card">
+                            <div class="property-image3">
+                            </div>
+                            <div class="property-description">
+                                <h5> Events </h5>
+                                <p class="text-muted" style="font-size: smaller;">Paid Hourly<br><b style="color: green;"><br>$60.00 USD/hour</b><br><b style="color: orange; font-weight: 400;">+ Transportation Costs</b><br>(Book on <a style="color: black; font-weight: bold;" href="{{ url_for('booking') }}">Booking Page!</a>)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <p style="font-size: medium; color: black;">Hover over each card to learn more!</p>
+            </div>
+        </div>
+    
+        
+    </div>
+    
+{% endblock main %}

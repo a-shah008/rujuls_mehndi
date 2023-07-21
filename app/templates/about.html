@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block navbar_links %}
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item" style="border-bottom: solid #F7AEF8;">
+            <a class="nav-link" href="{{ url_for('about') }}"><b>About</b></a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('my_work') }}">My Work</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('booking') }}">Booking</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a href="{{ url_for('contact') }}">
+                <button class="btn btn-light btn-outline-secondary my-2 my-sm-0" type="submit">Contact Us!</button>
+            </a>
+        </li>
+    </div>
+{% endblock navbar_links %}
+
+{% block main %}
+
+    <div class="container" style="padding-top: 150px; padding-bottom: 50px;">
+        <div class="text-center border-bottom manual-font">
+            <h3><b>About</b></h3>
+        </div>
+        <div class="border-bottom text-center" style="padding: 100px; font-size: large;">
+            <p>Introducing our brand, Rujul's Mehndi, where Mehndi<br>
+                art comes to life with a touch of enchantment. We take<br>
+                immense pride in our artistic flair, drawing inspiration<br>
+                from diverse cultures to create bespoke and mesmerizing<br>
+                henna designs. Our devotion lies in adorning moments of<br>
+                celebration with timeless elegance and joy<br>
+                through the age-old art of Mehndi.</p>
+        </div>
+    </div>
+    <div style="background-color: lavender;">
+        <div class="container text-center">
+            <h3 style="padding-top: 75px;">Our Team</h3>
+            <div class="row mx-auto" style="padding-top: 50px;">
+                <div class="col-md-6" style="padding-bottom: 25px;">
+                    <div class="card bg-light" style="border-color: black;">
+                        <!-- <img class="card-img-top" src="{{ url_for('static', filename='/img/default_profile_pic.jpg') }}" alt="Card image cap"> -->
+                        <div class="card-body bg-light">
+                            <h4 class="card-title mt-2">Rujul Shah</h4>
+                            <p class="card-text text-muted">Mehndi Artist</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-light">Dundee-Crown High School</li>
+                            <li class="list-group-item bg-light">Senior (12th Grade)</li>
+                            <li class="list-group-item bg-light">Email: <a href="mailto://rujulshah06@gmail.com">rujulshah06@gmail.com</a></li>
+                        </ul>
+                        <div class="card-body bg-light">
+                            <section class="container d-flex justify-content-center justify-content-lg-between">
+                                <div class="d-none d-lg-block">
+                                  <span>Personal Social Networks:</span>
+                                </div>
+                            
+                                <div>
+                                  <a href="https://twitter.com/RujulShah14" target="blank" class="me-4 text-reset">
+                                    <i class="fa fa-twitter"></i>
+                                  </a>
+                                  <a href="https://www.linkedin.com/in/rujul-shah-09799b257/" target="blank" class="me-4 text-reset">
+                                    <i class="fa fa-linkedin"></i>
+                                  </a>
+                                  <a href="https://www.instagram.com/rujulshah_06/" target="blank" class="me-4 text-reset">
+                                    <i class="fa fa-instagram"></i>
+                                  </a>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-light" style="border-color: black;">
+                        <!-- <img class="card-img-top" src="{{ url_for('static', filename='/img/default_profile_pic.jpg') }}" alt="Card image cap"> -->
+                        <div class="card-body bg-light">
+                            <h4 class="card-title mt-2">Aarav Shah</h4>
+                            <p class="card-text text-muted">Website Developer</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-light">Dundee-Crown High School</li>
+                            <li class="list-group-item bg-light">Freshman (9th Grade)</li>
+                            <li class="list-group-item bg-light">Email: <a href="mailto://aaravshah.300@gmail.com">aaravshah.300@gmail.com</a></li>
+                        </ul>
+                        <div class="card-body bg-light">
+                            <section class="container d-flex justify-content-center justify-content-lg-between">
+                                <div class="d-none d-lg-block">
+                                  <span>Personal Social Networks:</span>
+                                </div>
+                            
+                                <div>
+                                  <a href="https://twitter.com/a_shah008" target="blank" class="me-4 text-reset">
+                                    <i class="fa fa-twitter"></i>
+                                  </a>
+                                  <a href="https://www.linkedin.com/in/aarav-shah-041895281/" target="blank" class="me-4 text-reset">
+                                    <i class="fa fa-linkedin"></i>
+                                  </a>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 150px; padding-bottom: 50px;">
+                    <section style="border-top: solid 1px;" class="container d-flex justify-content-center justify-content-lg-between p-4">
+                        <div class="me-5 d-none d-lg-block">
+                            <span>Get connected with our business on its social networks:</span>
+                        </div>
+                        <div>
+                            <a href="https://www.linkedin.com/in/rujul-shah-09799b257/" target="blank" class="me-4 text-reset">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/rujul_mehndi/" target="blank" class="me-4 text-reset">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock main %}

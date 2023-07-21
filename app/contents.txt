@@ -1,0 +1,601 @@
+<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t js-fullheight">
+                    <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                        <h1>High Quality Mehndi Services with Reasonable Pricing</h1>
+                        <h2>All designs and applications done by <a href="{{ url_for('about') }}" style="color: #A6D9F7;"><b>Rujul Shah</b></a></h2>
+                        <p><a class="btn btn-primary btn-lg btn-demo" href="{{ url_for('services') }}"></i>View Services</a> <a href="{{ url_for('booking') }}" class="btn btn-primary btn-lg btn-learn">View Booking</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="fh5co-features">
+    <div class="container">
+        <div class="services-padding">
+            <div class="row">
+                <div class="col-md-4 animate-box">
+                    <div class="feature-left">
+                        <span class="icon">
+                            <i class="icon-genius"></i>
+                        </span>
+                        <div class="feature-copy">
+                            <div style="padding-left: 15px;">
+                                <h3>Versatility</h3>
+                                <p>A diverse selection of services.</p>
+                                <p><a href="{{ url_for('services') }}">Learn More <i class="icon-arrow-right22"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 animate-box">
+                    <div class="feature-left">
+                        <span class="icon">
+                            <i class="icon-wine"></i>
+                        </span>
+                        <div class="feature-copy">
+                            <div style="padding-left: 15px;">
+                                <h3>Convenience</h3>
+                                <p>I am more than willing to travel to you!</p>
+                                <p><a href="{{ url_for('services') }}">Learn More <i class="icon-arrow-right22"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 animate-box">
+                    <div class="feature-left">
+                        <span class="icon">
+                            <i class="icon-wallet"></i>
+                        </span>
+                        <div class="feature-copy">
+                            <div style="padding-left: 15px;">
+                                <h3>Budget</h3>
+                                <p>Reasonable pricing that fits your budget!</p>
+                                <p><a href="{{ url_for('services') }}">Learn More <i class="icon-arrow-right22"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 
+<div id="fh5co-wireframe" style="background-color: #2A528A;">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2 style="color: white;">We Cater To Your Needs!</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 animate-box">
+                <div class="user-frame" style="background-color: #FEE856;">
+                    <p>I appreciate all of our clients' kind words and feedback! We are constantly striving towards making ourselves the perfect fit for the events that matter most to you! Take a look around our website to learn more about us! We look forward to working with you!</p>
+                    <span>Rujul Shah</span><br>
+                    <small>Designer and Applicator</small>
+                </div>
+            </div>
+            <div class="col-md-7 animate-box" style="color: white;">
+                <p>Rujul was more than just a mehndi designer when she came to our wedding! She is a very talented young lady that seamlessly assimilates into any setting and environment!<br>- Meghna Gandhi, Recent Bride</p>
+            
+                <p>Beautiful and unique designs that had all of the wedding's guests in awe! She works very hard and efficiently, making her the perfect fit for weddings and other events in which mehndi needs to be applied.<br>- Riya Jain, Wedding Organizer</p>
+
+                <p>I don't know much about mehndi myself, however, when I saw the beautiful mehndi applied by Rujul on my wife and 3 daughters, I had to learn more about her! She is the perfect fit for any event and is very responsible! I look forward to working with her again soon!<br>- Dr. Rajesh Shah, Mehndi Ceremony Guest</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div id="fh5co-slider">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 animate-box">
+                <div class="heading">
+                    <h2>Download Our Latest Free HTML5 Bootstrap Template</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-push-1 animate-box">
+                <aside id="fh5co-hero">
+                <div class="flexslider">
+                    <ul class="slides">
+                       <li style="background-image: url(images/img_bg_1.jpg);">
+                           <div class="overlay-gradient"></div>
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+                                       <div class="slider-text-inner">
+                                           <div class="desc">
+                                                <h2>Air Free HTML5 Bootstrap Template</h2>
+                                                <p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </li>
+                       <li style="background-image: url(images/img_bg_2.jpg);">
+                           <div class="overlay-gradient"></div>
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+                                       <div class="slider-text-inner">
+                                           <div class="desc">
+                                                <h2>Ink Free HTML5 Bootstrap Template</h2>
+                                                <p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </li>
+                       <li style="background-image: url(images/img_bg_3.jpg);">
+                           <div class="overlay-gradient"></div>
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-md-12 col-md-offset-0 col-md-pull-10 slider-text slider-text-bg">
+                                       <div class="slider-text-inner">
+                                           <div class="desc">
+                                                <h2>Travel Free HTML5 Bootstrap Template</h2>
+                                                <p>Ink is a free html5 bootstrap and a multi-purpose template perfect for any type of websites. A combination of a minimal and modern design template. The features are big slider on homepage, smooth animation, product listing and many more</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </li>		   	
+                      </ul>
+                  </div>
+            </aside>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <div id="fh5co-blog">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Recent Post</h2>
+                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="fh5co-blog animate-box">
+                    <a href="#" class="blog-bg" style="background-image: url(img/crsl_mehndi_design.jpg);"></a>
+                    <div class="blog-text">
+                        <span class="posted_on">Feb. 15th 2016</span>
+                        <h3><a href="#">Photoshoot On The Street</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <ul class="stuff">
+                            <li><i class="icon-heart2"></i>249</li>
+                            <li><i class="icon-eye2"></i>1,308</li>
+                            <li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="fh5co-blog animate-box">
+                    <a href="#" class="blog-bg" style="background-image: url(images/blog-2.jpg);"></a>
+                    <div class="blog-text">
+                        <span class="posted_on">Feb. 15th 2016</span>
+                        <h3><a href="#">Surfing at Philippines</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <ul class="stuff">
+                            <li><i class="icon-heart2"></i>249</li>
+                            <li><i class="icon-eye2"></i>1,308</li>
+                            <li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="fh5co-blog animate-box">
+                    <a href="#" class="blog-bg" style="background-image: url(images/blog-3.jpg);"></a>
+                    <div class="blog-text">
+                        <span class="posted_on">Feb. 15th 2016</span>
+                        <h3><a href="#">Focus On Uderwater</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <ul class="stuff">
+                            <li><i class="icon-heart2"></i>249</li>
+                            <li><i class="icon-eye2"></i>1,308</li>
+                            <li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- <div id="fh5co-started">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Hire Us!</h2>
+                <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                <p><a href="#" class="btn btn-default btn-lg">Contact Us</a></p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+</div>
+
+<div id="fh5co-about">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Booking</h2>
+                <p>
+                    Follow the process below to book me for events! Feel free to <a href="{{ url_for('contact') }}">reach out</a> 
+                    with any questions, or want to book events without using the online interface we have set up!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fh5co-content-section animate-box" style="background-color: #2A528A; height: 2100px;">
+    <div class="container" style="position: relative; transform: translateY(-50%); top: 50%;">
+        <div class="container">
+            <div class="row row-bottom-padded-md">
+                <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                    <h2 style="color: white;"><b>Book an Event</b></h2><hr>
+                    <p style="font-size: smaller; padding-top: 0px; color: white;">Fill out the form below and press submit to book an event with me!<br>Shortly after I review the event, I will reach out as to whether I can make it or not!</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container animate-box">
+            <form method="POST" action="" enctype="multipart/form-data">
+                <div class="row" style="padding-top: 15px;">
+                    <br>
+                    <h3 class="animate-box" style="color: white;">Event: Organizer Contact Info</h3>
+                    <hr>
+                    <br>
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="full_name" style="color: white; font-weight: normal; padding-bottom: 15px;">Full Name of Organizer:<br></label><br>
+                            <input type="text" id="full_name" name="full_name" style="color: black; outline: auto; width: 970px">
+                            <br>
+                            <small style="color: white;">Example: John Doe</small>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="email" style="color: white; font-weight: normal; padding-bottom: 15px;">Email of Organizer:<br></label><br>
+                            <input type="text" id="email" name="email" style="color: black; outline: auto; width: 970px">
+                            <br>
+                            <small style="color: white;">Example: john.doe@gmail.com</small>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="phone_number" style="color: white; font-weight: normal; padding-bottom: 15px;">Phone Number of Organizer:<br></label><br>
+                            <input type="text" id="phone_number" name="phone_number" style="color: black; outline: auto; width: 970px">
+                            <br>
+                            <small style="color: white;">Example: 123-456-7890</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 25px;">
+                    <br>
+                    <br>
+                    <h3 class="animate-box" style="color: white;">Event: General Info</h3>
+                    <hr>
+                    <br>
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="name_of_event" style="color: white; font-weight: normal; padding-bottom: 15px;">Name of Event:<br></label><br>
+                            <input type="text" id="name_of_event" name="name_of_event" style="color: black; outline: auto; width: 970px">
+                        </div>
+                    </div>
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="short_description" style="color: white; font-weight: normal; padding-bottom: 15px;">Type of Event:<br></label><br>
+                            <input type="text" id="short_description" name="short_description" style="color: black; outline: auto; width: 970px">
+                        </div>
+                    </div>
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="location" style="color: white; font-weight: normal; padding-bottom: 15px;">Location:<br></label><br>
+                            <input type="text" id="location" name="location" style="color: black; outline: auto; width: 970px">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 25px;">
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="date_of_event" style="color: white; font-weight: normal; padding-bottom: 15px;">Date of Event:<br></label><br>
+                            <input type="text" id="date_of_event" name="date_of_event" style="color: black; outline: auto; width: 970px">
+                        </div>
+                    </div>
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="event_start_time" style="color: white; font-weight: normal; padding-bottom: 15px;">Event Start Time:<br></label><br>
+                            <input type="text" id="event_start_time" name="event_start_time" style="color: black; outline: auto; width: 970px">
+                        </div>
+                    </div>
+                    <div class="row" style="padding-left: 15px; padding-bottom: 25px;">
+                        <div class="text-left" class="animate-box">
+                            <label for="event_end_time" style="color: white; font-weight: normal; padding-bottom: 15px;">Event End Time:<br></label><br>
+                            <input type="text" id="event_end_time" name="event_end_time" style="color: black; outline: auto; width: 970px">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 50px;">
+                    <div class="text-center animate-box">
+                        <input type="submit" value="Submit" class="btn btn-lg btn-success" style="width: 500px; border-radius: 10px; font-weight: bold;">
+                    </div>
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="fh5co-about">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>About Me</h2>
+                <p>Hello! My name is Rujul Shah and I am currently a senior that wants to pursue the healthcare field in college. On the side, I 
+                    enjoy going out to weddings and other functions to put on mehndi on the guests, in addition to putting mehndi on my family and friends.
+                    I greatly appreciate this opportunity to serve my community, and I look forward to working with you!
+                </p>
+            </div>
+        </div>
+        <div class="row animate-box">
+            <div class="col-md-6 col-md-offset-3 text-center heading-section">
+                <h3>My History</h3>
+                <p>Approximately 4 years ago, I started off by putting mehndi on myself and family/friends, but now it has expanded 
+                    to much more than just that. I am very appreciative of my journey up till this point, and hope to continue to grow!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="fh5co-content-section" style="background-color: #A6D9F7;">
+    <div class="container">
+        <div class="row row-bottom-padded-md">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3 style="color: black;">Our Team</h3>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-5">
+                <div class="fh5co-team text-center animate-box" style="background-color: #2A528A;">
+                    <!-- <figure style="padding-bottom: 20px;">
+                        <img src="{{ url_for('static', filename='/img/default_profile_pic.jpg') }}" alt="user">
+                    </figure> -->
+                    <hr><p style="color: white;">Rujul Shah<br>Rujul's Mehndi Co.<br><a style="color: white; text-decoration: underline; font-size: smaller;" href="mailto://rujulshah06@gmail.com">rujulshah06@gmail.com</a><hr><span><p style="color: white;">Mehndi Artist</p></span></p>
+                    <blockquote>
+                        <p style="color: white;">A mission-driven entrepreneur that is eager to serve her community through beautiful mehndi designs. Her professional, while cheerful attitude, makes her the perfect fit for weddings and other functions, as she assimilates well into different environments and communicates well with guests.</p>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-md-offset-2 col-md-5">
+                <div class="fh5co-team text-center animate-box" style="background-color: #2A528A;">
+                    <!-- <figure style="padding-bottom: 20px;">
+                        <img src="{{ url_for('static', filename='/img/default_profile_pic.jpg') }}" alt="user">
+                    </figure> -->
+                    <hr><p style="color: white;">Aarav Shah<br>Rujul's Mehndi Co.<br><a style="color: white; text-decoration: underline; font-size: smaller;" href="mailto://aaravshah.300@gmail.com">aaravshah.300@gmail.com</a><hr><span class="text-mute"><p style="color: white;">Website Developer</p></span></p>
+                    <blockquote>
+                        <p style="color: white;">A "behind-the-scenes character" that makes sure all operations in the background are running smoothly, while using his knowledge of programming and web development to create and maintain a beautiful website that attracts many visitors every month.</p>
+                    </blockquote>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fh5co-started">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>View Our Various Services</h2>
+                <p>Rujul's Mehndi boasts a wide variety of services, each fitting into a specific need that suits our customer, including budget. Press the button below to learn more!</p>
+                <p><a href="{{ url_for('services') }}" class="btn btn-default btn-lg">View Services</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fh5co-about">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Contact Me!</h2>
+                <p>
+                    Use the form below to contact me directly! Responses go straight to a database, where they are soon reviewed by me.<br>Otherwise, use my email <a href="mailto://rujulshah06@gmail.com">rujulshah06@gmail.com</a> to contact me.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="fh5co-content-section" style="background-color: #2A528A;">
+    <div class="container">
+        <div class="row row-bottom-padded-md">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3 style="color: white;">Contact Form</h3><hr>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center animate-box" style="color: white; padding-top: 50px;">
+        <form action="" method="POST">
+            <div class="row">
+                <div class="col-md-6" class="animate-box">
+                    <label for="full_name" style="font-weight: normal;">Full Name:<br><b style="font-size: smaller; font-weight: normal;">(e.x. John Doe)</b></label><br>
+                    <input type="text" id="full_name" name="full_name" style="color: black; outline: auto; width: 400px;">
+                </div>
+                <div class="col-md-6" class="animate-box">
+                    <label for="phone_number" style="font-weight: normal;">Phone Number:<br><b style="font-size: smaller; font-weight: normal;">(e.x. 123-456-7890)</b></label><br>
+                    <input type="text" id="phone_number" name="phone_number" style="color: black; outline: auto; width: 400px;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 50px;">
+                <div class="col-md-6" class="animate-box">
+                    <label for="email" style="font-weight: normal;">Email:<br><b style="font-size: smaller; font-weight: normal;">(e.x. john.doe@gmail.com)</b></label><br>
+                    <input type="text" id="email" name="email" style="color: black; outline: auto; width: 400px;">
+                </div>
+                <div class="col-md-6" class="animate-box">
+                    <label for="geo_area" style="font-weight: normal;">Geographical Area:<br><b style="font-size: smaller; font-weight: normal;">(e.x. Chicago, IL)</b></label><br>
+                    <input type="text" id="geo_area" name="geo_area" style="color: black; outline: auto; width: 400px;">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 50px;">
+                <div class="col-md-12" class="animate-box">
+                    <label for="comment" style="font-weight: normal;">Your Comment:<br><b style="font-size: smaller; font-weight: normal;">(Say whatever you want!)</b></label><br>
+                    <textarea id="comment" name="comment" style="color: black; outline: auto;" rows="4" cols="75"></textarea>
+                </div>
+            </div> 
+            <div class="row" style="padding-top: 50px;">
+                <div class="col-md-12" class="animate-box">
+                    <input type="submit" value="Submit" class="btn btn-success">
+                </div>
+            </div> 
+        </form>
+    </div>
+</div>
+
+<div id="fh5co-about">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>My Work</h2>
+                <p>
+                    View the mehndi designs below, each one created by me exclusively. Consider the high-quality and beautiful designs, all done at a reasonable cost by someone with a lot of flexibility when it comes to time/booking. If you're interested, take a look at the various services we offer, and choose one that suits your needs!
+                    <p><a href="{{ url_for('services') }}">View the Various Services <i class="icon-arrow-right22"></i></a></p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="fh5co-content-section" style="background-color: #2A528A;">
+    <div class="container">
+        <div class="row row-bottom-padded-md">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3 style="color: white;">My Designs</h3>
+                <p style="color: white;">The following are my own mehndi designs that I have applied on a family member, a friend, or a client in the past. </p>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="crsl-body animate-box">
+        <input type="radio" name="position" checked />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <main id="carousel">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        <main>
+    </div>
+    
+</div>
+<!-- <div style="padding-left: 30px;">
+    <div class="row">
+        <div class="col-md-6 card ">
+            <img src="{{ url_for('static', filename='/img/IMG-4792.PNG') }}" alt="Avatar" style="width:100%; border-radius: 5px 5px 0 0;">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+        <div class="col-md-6 card">
+            <img src="{{ url_for('static', filename='/img/IMG-4792.PNG') }}" alt="Avatar" style="width:100%; border-radius: 5px 5px 0 0;">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div id="fh5co-about">
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Services</h2>
+                <p>
+                    Browse the different services I provide below. I have 2 different methods of pricing- hourly and flat fees depending on the specific work itself. 
+                    Hourly pricing is for events that you would like me to come out to, and the flat fees are for applying mehndi on an individual basis.<br>Feel free to reach out with any questions or concerns!<br>
+                    For flat fees pricing, view the booking page or click <a href="{{ url_for('booking') }}">here</a>!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid animate-box" style="height: 550px; background-color: #2A528A;">
+    <div class="row" style="position: relative; transform: translateY(-50%); top: 50%;">
+        <div class="col-md-4">
+            <div class="animate-box center">
+                <div class="property-card">
+                    <div class="property-image1">
+                    </div>
+                    <div class="property-description">
+                        <h5> Full Hand </h5>
+                        <p class="text-muted" style="font-size: smaller;">Individual Application<br><b style="color: green;">$15.00 USD</b><br>(To Purchase, <a style="color: black; font-weight: bold;" href="{{ url_for('contact') }}">Contact Me!</a>)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="animate-box center">
+                <div class="property-card">
+                    <div class="property-image2">
+                    </div>
+                    <div class="property-description">
+                        <h5> String Design </h5>
+                        <p class="text-muted" style="font-size: smaller;">Individual Application<br><b style="color: green;">$10.00 USD</b><br>(To Purchase, <a style="color: black; font-weight: bold;" href="{{ url_for('contact') }}">Contact Me!</a>)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="animate-box center">
+                <div class="property-card">
+                    <div class="property-image3">
+                    </div>
+                    <div class="property-description">
+                        <h5> Events </h5>
+                        <p class="text-muted" style="font-size: smaller;">Paid Hourly<br><b style="color: green;">$45.00 USD/hour</b><br>(Book on <a style="color: black; font-weight: bold;" href="{{ url_for('booking') }}">Booking Page!</a>)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center" style="padding-top: 135px;">
+        <p style="font-size: medium; color: white;">Hover over each card to learn more!</p>
+    </div>
+
+</div>

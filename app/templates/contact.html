@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block navbar_links %}
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('my_work') }}">My Work</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('booking') }}">Booking</a>
+        </li>
+    </div>
+    <div class="me-3">
+        <li class="nav-item">
+            <a href="{{ url_for('contact') }}">
+                <button class="btn btn-outline-secondary my-2 my-sm-0 mb-2" type="submit">Contact Us!</button>
+            </a>
+        </li>
+    </div>
+{% endblock navbar_links %}
+
+
+{% block main %}
+
+    <div class="container" style="padding-top: 150px;">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+                <div style="padding-bottom: 50px;">
+                    {% for category, message in messages %}
+                        <div class="container text-center alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+			{% endif %}
+		{% endwith %}
+        <div class="text-left border-bottom manual-font">
+            <h3><b>Contact Us</b></h3>
+        </div>
+        <div class="border-bottom text-center" style="padding-top: 100px; padding-left: 100px; padding-right: 100px; padding-bottom: 40px; font-size: large;">
+            <p>
+                Fill out the form below to send us a message through our website.<br>
+                These messages will be secure within our database.<br>
+                Otherwise, contact me with inquiries at <a>rujulshah06@gmail.com</a>.<br>
+            </p>
+            <div style="padding-top: 25px;">
+                <section class="container d-flex justify-content-center justify-content-lg-between p-4 border-top">
+                    <div class="me-5 d-none d-lg-block">
+                        <span style="font-weight: 500;">Get connected with our business on its social networks:</span>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/rujul-shah-09799b257/" target="blank" class="me-4 text-reset">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rujul_mehndi/" target="blank" class="me-4 text-reset">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top: 100px;">
+        <div style="background-color: lavender;">
+            <div>
+                <div class="row">
+                    <div class="container" style="padding: 100px;">
+                        <div style="padding-bottom: 50px;">
+                            <div style="border-bottom: solid 1px;">
+                                <h3 class="text-center">Contact Form</h3>
+                            </div>
+                            <div class="text-center" style="padding-top: 10px;">
+                                <p>
+                                    <b class="text-danger"> * </b> → Required Field
+                                </p>
+                            </div>
+                        </div>
+                        <form method="POST" action="" enctype="multipart/form-data">
+                            {{ form.hidden_tag() }}
+                            <fieldset class="form-group">
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.full_name.label(class="form-control-label") }}
+                                    {% if form.full_name.errors %}
+                                        {{ form.full_name(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.full_name.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.full_name(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: John Doe
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.email.label(class="form-control-label") }}
+                                    {% if form.email.errors %}
+                                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.email.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.email(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: john.doe@gmail.com
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.phone_number.label(class="form-control-label") }}
+                                    {% if form.phone_number.errors %}
+                                        {{ form.phone_number(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.phone_number.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.phone_number(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: 847-123-3456
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    <small class="text-danger" style="padding-right: 5px;"><b>*</b></small>{{ form.geographical_area.label(class="form-control-label") }}
+                                    {% if form.geographical_area.errors %}
+                                        {{ form.geographical_area(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.geographical_area.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.geographical_area(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-muted">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Example: Bartlett, IL, 60103
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group">
+                                    {{ form.message.label(class="form-control-label") }}
+                                    {% if form.message.errors %}
+                                        {{ form.message(class="form-control form-control-lg is-invalid") }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.message.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        {{ form.message(class="form-control form-control-lg") }}
+                                    {% endif %}
+                                    <small class="text-warning">
+                                        <p style="padding-top: 10px; padding-bottom: 10px;">
+                                            Max 150 characters
+                                        </p>
+                                    </small>
+                                </div>
+                                <div class="form-group" style="padding-top: 25px;">
+                                    {{ form.agreed }}
+                                    {{ form.agreed.label(class="ms-2") }}
+                                </div>
+                            </fieldset>
+                            <div class="form-group text-center">
+                                {{ form.submit(class="text-center btn btn-info btn-lg") }}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock main %}
+    
