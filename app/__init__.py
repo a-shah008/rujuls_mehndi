@@ -12,3 +12,11 @@ def create_app():
     db.init_app(app)
 
     return app
+
+app = create_app()
+app.app_context().push()
+
+db.drop_all()
+db.create_all()
+
+from app import routes

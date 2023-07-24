@@ -1,7 +1,6 @@
 import phonenumbers
 from email_validator import validate_email, EmailNotValidError
 from dateutil import parser
-import datetime
 
 
 def validate_phone_number(user_phone_number):
