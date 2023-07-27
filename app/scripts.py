@@ -23,7 +23,6 @@ def validate_email_address(user_email_address):
         return False
     
     return True
-
 def validate_each_input(list_of_inputs):
     for i in list_of_inputs:
         if str(i) == "" or str(i) == None:
