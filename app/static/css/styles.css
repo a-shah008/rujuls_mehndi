@@ -124,3 +124,35 @@ header, body {
   height:13em;
   background-size: 148px 208px;
 }
+
+#check {
+  display: none;
+}
+
+.content {
+  display: none;
+  transition: 0.5s linear;
+}
+
+label {
+  margin-top: 15px;
+  display: inline-block;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#check:checked ~ .content {
+  display: block;
+}
+
+#check:checked ~ div label {
+  visibility: hidden;
+}
+
+#check:checked ~ div label:after {
+  content: '<<< Show Less';
+  display: block;
+  visibility: visible;
+  border-bottom: 1px solid;
+}
