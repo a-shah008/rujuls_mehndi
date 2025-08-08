@@ -1,9 +1,9 @@
-from app import app, db
+from rmehndiapp import app, db
 from flask import render_template, url_for, flash, redirect, request
-from app.models import Message, Event
-from app.scripts import validate_phone_number, validate_email_address, validate_each_input, validate_date, validate_time
+from rmehndiapp.models import Message, Event
+from rmehndiapp.scripts import validate_phone_number, validate_email_address, validate_each_input, validate_date, validate_time
 from datetime import datetime
-from app.forms import BookEventForm, ContactUsForm
+from rmehndiapp.forms import BookEventForm, ContactUsForm
 
 
 @app.route("/", methods=["GET", "POST"])
