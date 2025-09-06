@@ -1,7 +1,26 @@
 import phonenumbers
 from email_validator import validate_email, EmailNotValidError
 from dateutil import parser
+from rmehndiapp.models import Message, Event
 
+def fetch_form_data():
+
+    message_db_info_result = ""
+    event_db_info_result = ""
+
+    message_query = Message.query.all()
+    event_query = Event.query.all()
+    
+    if message_query == []:
+        message_db_info_result = "Nothing yet"
+    else:
+        message_db_info_result = message_query
+    if event_query == []:
+        event_db_info_result = "Nothing yet"
+    else:
+        event_db_info_result = event_query
+
+    return f"Message DB: {message_db_info_result}                                   Event DB: {event_db_info_result}"
 
 def validate_phone_number(user_phone_number):
 
