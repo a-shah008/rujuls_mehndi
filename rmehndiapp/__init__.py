@@ -19,4 +19,4 @@ app.app_context().push()
 db.drop_all()
 db.create_all()
 
-from app import routes
+from rmehndiapp import routes
